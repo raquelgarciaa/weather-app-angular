@@ -1,11 +1,25 @@
-<div class="search_tool">
-  <form (submit)="onSubmit()">
-    <input
-      type="text"
-      placeholder="Buscar localização"
-      name="city"
-      [(ngModel)]="initialCity"
-      class="bg-blue-100"
-    />
-  </form>
+<div class="flex-col justify-center">
+  <div class="w-fit">
+    <form (submit)="onSubmit()">
+      <input
+        type="text"
+        placeholder="Buscar localização"
+        name="city"
+        [(ngModel)]="initialCity"
+        class="bg-blue-900 text-white rounded"
+      />
+
+      <span (click)="onSubmit()">
+        <fa-icon
+          animation="fade"
+          size="lg"
+          class="search-icon"
+          [icon]="searchIcon"
+        >
+        </fa-icon>
+      </span>
+    </form>
+  </div>
+
+  <app-weather-card [weatherDatasInput]="weatherDatas"> </app-weather-card>
 </div>

@@ -1,15 +1,18 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Para usar diretivas como ngIf, ngFor, etc.
 import { WeatherService } from '../../services/weather.service';
 import { WeatherDatas } from '../../../../models/interface/WeatherData';
 import { Subject, takeUntil } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { WeatherCardComponent } from '../../components/weather-card/weather-card.component';
 
 @Component({
   selector: 'app-weather-home',
   standalone: true,
   templateUrl: './weather-home.component.html',
-  imports: [CommonModule, FormsModule], // Importando CommonModule, se necessário
+  imports: [CommonModule, FormsModule, FontAwesomeModule, WeatherCardComponent], // Importando CommonModule, se necessário
 })
 export class WeatherHomeComponent implements OnInit, OnDestroy {
   //assinatura que se inscreve em várias
@@ -17,7 +20,7 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
   constructor(private weatherService: WeatherService) {}
   initialCity = 'São Paulo';
   weatherDatas!: WeatherDatas;
-
+  searchIcon = faSearch;
   //OnInit
   ngOnInit(): void {
     this.getWheaterData(this.initialCity);
@@ -38,6 +41,7 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
 
   onSubmit(): void {
     this.getWheaterData(this.initialCity);
+    console.log('chamou a função');
     this.initialCity = '';
   }
   //onDestroy

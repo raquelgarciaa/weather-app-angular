@@ -1,0 +1,28 @@
+<div
+  *ngIf="weatherDatasInput"
+  class="flex-col items-center bg-blue-100 rounded w-md"
+>
+  <div>
+    <img src="/assets/sun.jpg" *ngIf="weatherDatasInput.main.temp > 15" />
+    <img
+      src="../../../../../assets/cold1.jpg"
+      *ngIf="weatherDatasInput.main.temp < 15"
+    />
+    <div class="flex-col">
+      <p class="text-center">{{ weatherDatasInput.name }}</p>
+      <p class="text-center">
+        {{ weatherDatasInput.main.temp | number : "1.0-0" }}°C
+      </p>
+    </div>
+  </div>
+  <div class="flex-col align-center">
+    <p class="text-center">Mais informações</p>
+    <div class="flex align-center">
+      <div class="flex-col">
+        <fa-icon size="lg" [icon]="temperature"></fa-icon>
+        <p>Mínima</p>
+      </div>
+      <p>{{ weatherDatasInput.main.temp_min }}</p>
+    </div>
+  </div>
+</div>
