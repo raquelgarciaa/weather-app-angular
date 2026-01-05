@@ -1,65 +1,48 @@
-🌤️ Weather App - Angular & AI Design
-Uma aplicação de previsão do tempo moderna e minimalista, desenvolvida com Angular e estilizada com Tailwind CSS. O design foi concebido através de inteligência artificial (Gemini), focando em uma experiência de usuário limpa com estética Glassmorphism.
+# 🌤️ Weather App - Angular & AI Design
 
-<p align="center"> <img width="700" alt="Weather App Interface" src="https://github.com/user-attachments/assets/de9f9ffa-4250-4262-8272-9e7830ee1b18" /> </p>
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-🚀 Funcionalidades
-Busca em tempo real: Pesquise por qualquer cidade do mundo.
+Uma aplicação de previsão do tempo moderna e minimalista desenvolvida com **Angular v17+**. O projeto foca na integração entre ferramentas de desenvolvimento web modernas e design gerado por Inteligência Artificial (Gemini).
 
-Dados Detalhados: * Temperatura atual com destaque visual.
+---
 
-Variações de Temperatura (Mínima e Máxima).
+## 📸 Preview do Design
 
-Indicadores de Umidade e Velocidade do Vento.
+<p align="center">
+  <img width="100%" alt="Weather App Interface" src="https://github.com/user-attachments/assets/de9f9ffa-4250-4262-8272-9e7830ee1b18" />
+</p>
 
-Design Responsivo: Adaptável para dispositivos móveis, tablets e desktop.
+## 🚀 Funcionalidades
 
-Interface Glassmorphism: Efeito de vidro fosco utilizando utilitários avançados do Tailwind.
+- **Consulta em Tempo Real:** Integração direta com a API OpenWeatherMap.
+- **Estética Glassmorphism:** Interface translúcida com efeitos de desfoque e gradientes vibrantes.
+- **Design by AI:** Layout e paleta de cores concebidos através de engenharia de prompt no Google Gemini.
+- **Dados Meteorológicos:**
+  - Temperatura atual.
+  - Variações de Mínima/Máxima.
+  - Velocidade do vento.
+  - Índice de umidade.
 
-🛠️ Tecnologias Utilizadas
-Front-end
-Angular: Framework principal para SPA (Single Page Application).
+## 🛠️ Tecnologias
 
-Tailwind CSS: Framework CSS utility-first para estilização rápida e responsiva.
+### **Frontend**
+* **Angular:** Framework para construção da SPA.
+* **Tailwind CSS:** Estilização baseada em utilitários e design responsivo.
+* **TypeScript:** Tipagem forte para maior segurança no consumo da API.
 
-Lucide Icons / Heroicons: (Opcional, se estiver usando ícones para vento/umidade).
+### **Backend (Data Source)**
+* **OpenWeather API:** Fornecimento de dados climáticos globais.
 
-Back-end & API
-OpenWeatherMap API: Consumo de dados meteorológicos globais em tempo real.
+---
 
-Gemini AI: Utilizado como parceiro de pensamento para a concepção do layout e estrutura do código CSS.
+## 🔧 Como Executar o Projeto
 
-🔧 Instalação e Configuração
-Pré-requisitos
-Node.js (v18+)
+### 1. Pré-requisitos
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado e a [Angular CLI](https://angular.io/cli).
 
-Angular CLI (npm install -g @angular/cli)
-
-Uma chave de API da OpenWeatherMap
-
-Passo a Passo
-Clone o repositório:
-
-Bash
-
-git clone https://github.com/seu-usuario/weather-app-angular.git
+### 2. Clonar o Repositório
+```bash
+git clone [https://github.com/seu-usuario/weather-app-angular.git](https://github.com/seu-usuario/weather-app-angular.git)
 cd weather-app-angular
-Instale as dependências:
-
-Bash
-
-npm install
-Configure a API Key: No arquivo src/environments/environment.ts, adicione sua chave:
-
-TypeScript
-
-export const environment = {
-  production: false,
-  apiKey: 'SUA_CHAVE_AQUI'
-};
-Inicie o servidor de desenvolvimento:
-
-Bash
-
-ng serve
-Acesse: http://localhost:4200
