@@ -1,12 +1,14 @@
-<div class="flex-col justify-center">
+<div
+  class="flex flex-col items-center gap-y-4 p-4 bg-gradient-to-br from-indigo-500 to-purple-700 bg-auto h-screen"
+>
   <div class="w-fit">
-    <form (submit)="onSubmit()">
+    <form (submit)="onSubmit()" class="flex gap-x-2 items-center">
       <input
         type="text"
         placeholder="Buscar localização"
         name="city"
         [(ngModel)]="initialCity"
-        class="bg-blue-900 text-white rounded"
+        class="bg-blue-900 text-white text-center rounded-full px-4 py-0.5"
       />
 
       <span (click)="onSubmit()">
@@ -15,6 +17,7 @@
           size="lg"
           class="search-icon"
           [icon]="searchIcon"
+          style="color: white"
         >
         </fa-icon>
       </span>
