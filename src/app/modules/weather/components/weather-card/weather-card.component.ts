@@ -12,6 +12,38 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class WeatherCardComponent implements OnInit {
   temperature = faTemperatureHalf;
+  currentDate: Date = new Date();
+  dayNumber: number = this.currentDate.getDay();
+  dayOfTheMonth: number = this.currentDate.getDate();
+  monthNumber: number = this.currentDate.getMonth();
+
+  dayNames: string[] = [
+    'Domingo',
+    'Segunda',
+    'Terça',
+    'Quarta',
+    'Quinta',
+    'Sexta',
+    'Sabado',
+  ];
+
+  monthNames: string[] = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro',
+  ];
+  dayName: string = this.dayNames[this.dayNumber];
+  monthName: string = this.monthNames[this.monthNumber];
+
   ngOnInit(): void {
     console.log('datas');
   }

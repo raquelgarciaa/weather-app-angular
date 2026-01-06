@@ -3,26 +3,18 @@
   class="flex-col items-center bg-white rounded w-md"
 >
   <div>
-    <img src="/assets/sun.jpg" *ngIf="weatherDatasInput.main.temp > 15" />
-    <img
-      src="../../../../../assets/cold1.jpg"
-      *ngIf="weatherDatasInput.main.temp < 15"
-    />
-    <div class="flex-col">
-      <p class="text-center">{{ weatherDatasInput.name }}</p>
-      <p class="text-center">
-        {{ weatherDatasInput.main.temp | number : "1.0-0" }}°C
-      </p>
+    <p>{{ weatherDatasInput.name }}</p>
+
+    <div>
+      <p>{{ weatherDatasInput.main.temp | number : "1.0-0" }} °C</p>
+      <p>{{ dayName }}, {{ dayOfTheMonth }} de {{ monthName }}</p>
     </div>
   </div>
+
   <div class="flex-col align-center">
-    <p class="text-center">Mais informações</p>
-    <div class="flex items-center gap-x-4">
-      <div class="flex flex-col items-center w-fit">
-        <fa-icon size="lg" [icon]="temperature"></fa-icon>
-        <p>Mínima</p>
-      </div>
-      <p class="w-fit h-fit">{{ weatherDatasInput.main.temp_min }} °C</p>
+    <div>
+      <p>Min/Máx</p>
+      <p>{{ weatherDatasInput.main.temp_min }}/</p>
     </div>
   </div>
 </div>
