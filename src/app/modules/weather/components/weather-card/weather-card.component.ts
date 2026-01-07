@@ -1,7 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { WeatherDatas } from '../../../../models/interface/WeatherData';
 import { CommonModule } from '@angular/common';
-import { faTemperatureHalf } from '@fortawesome/free-solid-svg-icons';
+import {
+  faDroplet,
+  faTemperatureHalf,
+  faWind,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -43,6 +47,9 @@ export class WeatherCardComponent implements OnInit {
   ];
   dayName: string = this.dayNames[this.dayNumber];
   monthName: string = this.monthNames[this.monthNumber];
+
+  dropIcon = faDroplet;
+  windIcon = faWind;
 
   ngOnInit(): void {
     console.log('datas');

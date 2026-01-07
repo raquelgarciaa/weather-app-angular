@@ -1,6 +1,6 @@
 <div
   *ngIf="weatherDatasInput"
-  class="flex-col items-center bg-white rounded w-md"
+  class="flex-col items-center bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-[2.5rem] w-md p-8 text-white"
 >
   <div>
     <p>{{ weatherDatasInput.name }}</p>
@@ -11,10 +11,36 @@
     </div>
   </div>
 
-  <div class="flex-col align-center">
+  <div class="flex">
     <div>
       <p>Min/Máx</p>
-      <p>{{ weatherDatasInput.main.temp_min }}/</p>
+      <p>
+        {{ weatherDatasInput.main.temp_min }}°C/{{
+          weatherDatasInput.main.temp_max
+        }}°C
+      </p>
+    </div>
+
+    <div>
+      <div class="flex items-center">
+        <p>Umidade</p>
+        <fa-icon
+          [icon]="dropIcon"
+          class="text-white/70 group-focus-within:text-white"
+        ></fa-icon>
+      </div>
+      <p>{{ weatherDatasInput.main.humidity }}%</p>
+    </div>
+
+    <div>
+      <div class="flex items-center">
+        <p>Vento</p>
+        <fa-icon
+          [icon]="windIcon"
+          class="text-white/70 group-focus-within:text-white"
+        ></fa-icon>
+      </div>
+      <p>{{ weatherDatasInput.wind.speed }}km/h</p>
     </div>
   </div>
 </div>
