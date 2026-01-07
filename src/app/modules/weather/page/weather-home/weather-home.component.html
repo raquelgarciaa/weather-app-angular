@@ -6,25 +6,19 @@
   >
     <form
       (submit)="onSubmit()"
-      class="flex px-2 py-0.5 gap-x-2 items-center bg-white/30 backdrop-invert backdrop-opacity-5 rounded-lg"
+      class="group flex px-3 py-1.5 gap-x-2 items-center rounded-lg border transition-all duration-300 bg-white/10 border-white/10 focus-within:bg-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
     >
-      <span (click)="onSubmit()">
-        <fa-icon
-          animation="fade"
-          size="lg"
-          class="search-icon"
-          [icon]="searchIcon"
-          style="color: white"
-        >
-        </fa-icon>
-      </span>
+      <fa-icon
+        [icon]="searchIcon"
+        class="text-white/70 group-focus-within:text-white"
+      ></fa-icon>
 
       <input
         type="text"
-        placeholder="Buscar cidade..."
-        name="city"
+        name="search-field"
         [(ngModel)]="initialCity"
-        class="py-0.5"
+        placeholder="Buscar cidade..."
+        class="bg-transparent w-full py-0.5 text-white placeholder-white/60 outline-none border-none focus:ring-0 shadow-none"
       />
     </form>
   </div>
