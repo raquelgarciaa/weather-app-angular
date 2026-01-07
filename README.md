@@ -46,9 +46,13 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) instalado e a [Angular CLI
 ```bash
 git clone [https://github.com/seu-usuario/weather-app-angular.git](https://github.com/seu-usuario/weather-app-angular.git)
 cd weather-app-angular
+```
+
 #### 3. Instalar Dependências
 ```bash
 npm install
+```
+
 ### 4. Configurar a API Key
 Crie ou edite o arquivo src/environments/environment.ts e adicione sua chave da OpenWeatherMap:
 ```bash
@@ -58,7 +62,10 @@ export const environment = {
   production: false,
   weatherApiKey: 'SUA_CHAVE_AQUI'
 };
+```
+
 ### 5. Rodar a Aplicação
 ```bash
 ng serve
+```
 Acesse http://localhost:4200/ no seu navegador.
